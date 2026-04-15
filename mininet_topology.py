@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
 
+"""
+Mininet Topology for Packet Logger Project
+==========================================
+Topology:
+h1, h2 ---- s1 ---- s2 ---- h3, h4
+
+This topology demonstrates:
+  - Same-switch forwarding
+  - Cross-switch forwarding
+  - Flooding (ARP / unknown destination)
+  - Firewall blocking
+  - Protocol variety (ICMP, TCP, UDP)
+
+References:
+  - Mininet Python API: http://mininet.org/api/
+"""
+
 from mininet.net import Mininet
 from mininet.node import RemoteController, OVSSwitch
 from mininet.cli import CLI
@@ -73,7 +90,8 @@ def run():
     info("    mininet> h1 iperf -c h2 -t 5   # iperf TCP client\n")
     info("    mininet> h1 iperf -c h2 -u -t 5 # iperf UDP client\n")
     info("    mininet> pingall               # all-pairs ping\n")
-    info("    mininet> dpctl dump-flows       # show flow tables\n")
+    info("    mininet> sh ovs-ofctl -O OpenFlow10 dump-flows s1\n")
+    info("    mininet> sh ovs-ofctl -O OpenFlow10 dump-flows s2\n")
     info("=" * 60 + "\n")
 
     CLI(net)
