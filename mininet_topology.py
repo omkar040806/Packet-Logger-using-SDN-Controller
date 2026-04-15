@@ -1,24 +1,4 @@
 #!/usr/bin/env python3
-"""
-Mininet Topology for Packet Logger Project
-==========================================
-Topology:
-         h1 (10.0.0.1)
-          |
-         s1 ---- s2 ---- h3 (10.0.0.3)
-          |
-         h2 (10.0.0.2)
-
-This creates a simple tree topology with 1 core switch (s1),
-1 edge switch (s2), and 3 hosts — enough to demonstrate:
-  - Unicast forwarding
-  - Flooding (ARP)
-  - Cross-switch traffic
-  - Protocol variety (ICMP, TCP/iperf, UDP)
-
-References:
-  - Mininet Python API: http://mininet.org/api/
-"""
 
 from mininet.net import Mininet
 from mininet.node import RemoteController, OVSSwitch
