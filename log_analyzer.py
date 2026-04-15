@@ -10,7 +10,7 @@ Reads packet_log.txt produced by the POX controller and generates:
 
 Usage:
     python3 log_analyzer.py [path_to_log]
-    Default log path: ./pox_controller/logs/packet_log.txt
+    Default log path: ./pox/logs/packet_log.txt
 """
 
 import sys
