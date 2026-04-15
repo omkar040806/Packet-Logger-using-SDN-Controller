@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.tmp
+*.log
+
+screenshots/.DS_Store
+sample_outputs/.DS_Store
+report_notes/.DS_Store
+
+pox/logs/*.txt
+pox/logs/*.csv
