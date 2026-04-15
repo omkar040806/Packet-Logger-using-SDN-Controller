@@ -161,7 +161,7 @@ def export_csv(records, out_path="packet_analysis.csv"):
 if __name__ == "__main__":
     default_log = os.path.join(
         os.path.dirname(__file__),
-        "pox_controller", "logs", "packet_log.txt"
+        "pox", "logs", "packet_log.txt"
     )
     log_path = sys.argv[1] if len(sys.argv) > 1 else default_log
 
